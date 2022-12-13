@@ -1,0 +1,80 @@
+.honeymoon-section{
+    margin: 50px 0 100px 0;
+}
+.honeymoon{
+
+    &__title{
+        font-weight: 500;
+        line-height: 39px;
+        font-size: 32px;
+        color: #000001;
+        margin-bottom: 10px;
+    }
+
+    &__list{
+        @include center(none);
+        flex-wrap: wrap;
+        gap: 37px;
+        margin-top: 20px;
+
+        &-item{
+            position: relative;
+
+            &-content{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                border-radius: 0px 0px 20px 20px;
+                background: linear-gradient(0deg, #FFFFFF 67.04%, rgba(255, 255, 255, 0.38) 108.62%);
+                padding: 10px 40px 22px 35px;
+
+                &-title{
+                    font-weight: 500;
+                    line-height: 22px;
+                    font-size: 18px;
+                    color: #0E0E0E;
+                }
+
+                &-text{
+                    margin-top: 11px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    font-size: 15px;
+                    color: #000000;
+                }
+
+                &-link{
+                    display: none;
+                    
+
+                }
+
+            }
+
+            .honeymoon-active{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                background: linear-gradient(0deg, #FFFFFF 10.04%, rgba(255, 255, 255, 0.38) 100.62%) ;
+                text-align: center;
+                padding: 100px 0 0 0;
+
+                .honeymoon__list-item-content-link{
+
+                    background: #FFFFFF;
+                    border-radius: 12px;
+                    box-shadow: 0px 5px 11px #D9B76A;
+                    font-weight: 400;
+                    line-height: 22px;
+                    font-size: 18px;
+                    color: #000000;
+                    display: inline-block;
+                    margin-top: 10px;
+                    padding: 8px 30px 9px 31px;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
