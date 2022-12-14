@@ -1,42 +1,80 @@
-let registerSection = document.querySelector(".register")
-let forgetPassword = document.querySelector(".link")
-let newLogin = document.querySelector(".new-login")
+
+let loginBtn = document.querySelectorAll('.btn');
+let loginBody = document.querySelector(".wrapper__modalForm-loginForm");
+let registerBody = document.querySelector(".wrapper__modalForm-registerForm");
+
+for (let i = 0; i < loginBtn.length; i++) {
+
+	loginBtn[i].addEventListener('click', function() {
+        console.log("asadbek");
+		for (let x = 0; x < loginBtn.length; x++) {
+			if (loginBtn[x] == this) {
+				loginBtn[x].classList.add('actionBtn');
+                loginBody.style.display = 'none';
+                registerBody.style.display = 'block';
+
+			} else {
+				loginBtn[x].classList.remove('actionBtn');
+                registerBody.style.display = "none";
+                loginBody.style.display = "block";
+			}
+		}
+	});
+}
 
 
-forgetPassword.addEventListener('click', () => {
-  registerSection.style.display = 'none'
-    newLogin.style.display = 'block'
+
+let form = document.querySelector(".form");
+let btnLogin = document.querySelector('.btnLogin');
+let loginCard = document.querySelector('.login-card');
+let loginPagesDelete =document.querySelector('.delete');
+
+
+
+btnLogin.addEventListener('click' , function(e) {
+    e.preventDefault();
+
+    btnLogin.classList.toggle("login-card")
+    loginCard.style.display = "block";
+
+
+    // innerHTML chaqirilayapdi function
+    checkBtn();
+
+    console.log("asadbek");
 })
 
-let smsKod = document.querySelector(".links");
-let newRegister = document.querySelector(".new-register");
-
-smsKod.addEventListener('click', () => {
-  registerSection.style.display = 'none'
-  newRegister.style.display = 'block'
-})
 
 
 
+// input value
 
-let kodRegister = document.querySelectorAll(".new__register");
-let kodBody = document.querySelector(".new__register-body-kod");
-let parolBody = document.querySelector(".new__register-body-parol");
+let userPhoneNumber = document.querySelector('.form__inputGroup-phone');
+let userPassword = document.querySelector('.form__inputGroup-password');
 
 
-for (let i = 0; i < kodRegister.length; i++) {
-  kodRegister[i].addEventListener('click', function() {
-      for (let x = 0; x < kodRegister.length; x++) {
-          if (kodRegister[x] == this) {
-              kodRegister[x].classList.add('new-register-active');
-      kodBody.style.display = "none"
-      parolBody.style.display = "block"
-              
-          } else {
-              kodRegister[x].classList.remove('new-register-active');
-      kodBody.style.display = "block"
-      parolBody.style.display = "none"
-          }
-      }
-  });
+
+function checkBtn() {
+
+    let check = `
+
+    <div class="box">
+        <i class="fa fa-xmark delete"></i>
+        <p class="login-card-phone">
+            <span>tel :</span>
+            ${userPhoneNumber.value}
+        </p>
+        <p class="login-card-password">
+            <span>password :</span>
+            ${userPassword.value}
+        </p>
+        <i class="fa fa-check  check"></i>
+        <span>
+            sizning ma'lumotlaringiz saqlandi
+        </span>
+    </div>
+
+    `
+    loginCard.innerHTML = check
+
 }

@@ -78,7 +78,6 @@
                     width: 50%;
                 }
             }
-
         }
     }
 
@@ -145,7 +144,6 @@
     }
 }
 .active{
-    // color: #fff;
     padding:8px;
     background-color: #fff;
     border-radius: 14px;
@@ -178,7 +176,6 @@
 
         &:hover{
             transition: all 0.5s;
-            // color: #FF416C;
         }
 
         &:hover::after ,

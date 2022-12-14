@@ -1,19 +1,4 @@
 
-// header start
-let lists = document.querySelectorAll(".header__item-list");
-
-for (let i = 0; i < lists.length; i++) {
-	lists[i].addEventListener('click', function() {
-		for (let x = 0; x < lists.length; x++) {
-			if (lists[x] == this) {
-				lists[x].classList.add('active');
-			} else {
-				lists[x].classList.remove('active');
-			}
-		}
-	});
-}
-// header end
 
 // hero boox  start
 let heroBox = document.querySelectorAll(".box__item-list");
@@ -35,9 +20,6 @@ for (let i = 0; i < heroBox.length; i++) {
 
 // hero section carusel start
 
-
-
-
 let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let hero = document.querySelector(".hero");
@@ -51,8 +33,6 @@ let plus = 0
 let activ = document.querySelectorAll(".box1-span");
 
 
-
-
 right.addEventListener('click', () => {
     console.log(right);
 
@@ -62,8 +42,6 @@ right.addEventListener('click', () => {
     else{
         hero.style.transform = `translateX(${plus -= 1350}px)`
     }
-
-
     
 } )
 
@@ -122,8 +100,6 @@ else{
 }
 });
 
-
-
 // hero section carusel end
 
 
@@ -159,7 +135,6 @@ weddingRight.addEventListener('click', () => {
 
     if(qoshish == -3543){
         weddingRight.type.disabled
-        
 
     }
     
@@ -168,8 +143,6 @@ weddingRight.addEventListener('click', () => {
 
     }
 
-
-    
 } )
 
 weddingLeft.addEventListener('click', () => {
@@ -178,13 +151,11 @@ weddingLeft.addEventListener('click', () => {
     if(qoshish == 0){
         weddingLeft.type.disabled
 
-
     }
 
     else{
 
         weddingList.style.transform = `translateX(${qoshish += 1181}px)`
-        
 
     }
     
@@ -196,84 +167,11 @@ weddingLeft.addEventListener('click', () => {
 
 
 
-// chat messages
-
-const chatBoxToggle = document.querySelector('.chatbox__wrapper-toggle');
-const chatBoxMessage = document.querySelector('.chatbox__wrapper-message');
-
-
-chatBoxToggle.addEventListener('click' , function() {
-    chatBoxMessage.classList.toggle('show');
-})
-
-// input
-const inputMessage = document.querySelector('.chatbox__wrapper-message-bottom-input');
-const chatBoxForm = document.querySelector('.chatbox__wrapper-message-bottom-form');
-
-inputMessage.addEventListener('click' , function() {
-    let line = inputMessage.value.split('\n').length;
-
-    if(inputMessage.rows < 6 || line < 6){
-        inputMessage.rows = line;
-    }
-
-
-});
 
 
 
-const chatBoxContent = document.querySelector('.chatbox__wrapper-message-content');
-const chatBoxNoMessage = document.querySelector('.chatbox__wrapper-message-content-no-message');
 
-chatBoxForm.addEventListener('submit' , function(e) {
-    e.preventDefault();
+// honeymoon end
 
-    writeMessage();
-    setTimeout(autoReply , 1000);
-})
 
-function addZero(num){
-    return num < 10 ? 'o' + num : num
-}
 
-function writeMessage() {
-    const today = new Date();
-
-    let message = `
-    <div class="chatbox__wrapper-message-content-item sent">
-        <span class="chatbox__wrapper-message-content-item-text">
-            ${inputMessage.value.trim().replace(/\ n/g, '<br>\n')}
-        </span>
-        <span class="chatbox__wrapper-message-content-item-time">
-            ${addZero(today.getHours())} : ${addZero(today.getMinutes())}
-        </span>
-    </div>
-
-    
-    `
-    chatBoxContent.insertAdjacentHTML('beforeend', message);
-    inputMessage.focus()
-    inputMessage.value = ' '
-    chatBoxNoMessage.style.display = 'none'
-}
-
-function autoReply() {
-    const today = new Date();
-
-    let message = `
-    <div class="chatbox__wrapper-message-content-item received">
-        <span class="chatbox__wrapper-message-content-item-text">
-            Salom ism Asadbek
-            sizga qanday yordam bera olaman!
-        </span>
-        <span class="chatbox__wrapper-message-content-item-time">
-            ${addZero(today.getHours())} : ${addZero(today.getMinutes())}
-        </span>
-    </div>
-
-    
-    `
-    chatBoxContent.insertAdjacentHTML('beforeend', message);
-}
-
-// chat messages
