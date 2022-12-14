@@ -104,14 +104,14 @@
                             <button class=" registerBtn btn">Registratsiya</button>
                         </div>
                         <div class="wrapper__modalForm-loginForm">
-                            <form class="form">
+                            <form class="form" id="form">
                                 <div class="form__inputGroup">
-                                    <label for="tel">Telefon</label>
-                                    <input class="form__inputGroup-phone" type="tel" name="tel" id="tel" placeholder="+998 91 298 98 08" required>
+                                    <label for="phone">Telefon</label>
+                                    <input class="form__inputGroup-phone form-input" type="tel" name="phone" id="phone" placeholder="+998 91 298 98 08" required>
                                 </div>
                                 <div class="form__inputGroup">
                                     <label for="password">Parol</label>
-                                    <input class="form__inputGroup-password" type="password" name="password" id="password" placeholder="******" required>
+                                    <input  class="form__inputGroup-password form-input" type="password" name="password" id="password" placeholder="******" required>
                                 </div>
                                 <button class="submitBtn btnLogin">Login</button>
                             </form>
@@ -140,7 +140,7 @@
                                 <a href="#link" class="wrapper__modalForm-userForm-link-kod">
                                     Sizning raqamingizga sms kod yuboriladi
                                 </a>
-                                <button class="submitBtn">Registratsiya</button>
+                                <button type="submit" class="submitBtn">Registratsiya</button>
                             </form>
                         </div>
                     </div>
@@ -148,23 +148,7 @@
             </div>
 
             <!-- modal uhshab chiqish logindan keyin start -->
-            <div class="login-card" style="display: none;">
-                <!-- <div class="box">
-                    <i class="fa fa-xmark delete"></i>
-                    <p class="login-card-phone">
-                        <span>tel :</span>
-                        +998912989808
-                    </p>
-                    <p class="login-card-password">
-                        <span>password :</span>
-                        123456789
-                    </p>
-                    <i class="fa fa-check  check"></i>
-                    <span>
-                        sizning ma'lumotlaringiz saqlandi
-                    </span>
-                </div> -->
-            </div>
+            <div class="login-card" style="transform: scale(0);"></div>
             <!-- modal uhshab chiqish logindan keyin end -->
         </section>
     </main>

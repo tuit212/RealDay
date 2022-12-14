@@ -24,28 +24,31 @@ for (let i = 0; i < loginBtn.length; i++) {
 
 
 
-let form = document.querySelector(".form");
+let form = document.querySelector("#form");
 let btnLogin = document.querySelector('.btnLogin');
 let loginCard = document.querySelector('.login-card');
 let loginPagesDelete =document.querySelector('.delete');
 
 
 
-btnLogin.addEventListener('click' , function(e) {
+form.addEventListener('submit' , function(e) {
     e.preventDefault();
 
-    btnLogin.classList.toggle("login-card")
-    loginCard.style.display = "block";
 
-
-    // innerHTML chaqirilayapdi function
+    loginCard.style.transform = "scale(1)";
+    
+    // loginCard.classList.toggle("login-card")
+    
+    
+    // // innerHTML chaqirilayapdi function
+    
+    
+    checkValue();
     checkBtn();
+    
+    // console.log("asadbek");
 
-    console.log("asadbek");
 })
-
-
-
 
 // input value
 
@@ -59,7 +62,7 @@ function checkBtn() {
     let check = `
 
     <div class="box">
-        <i class="fa fa-xmark delete"></i>
+        <i class="fa fa-xmark delete" onclick=deletePage()></i>
         <p class="login-card-phone">
             <span>tel :</span>
             ${userPhoneNumber.value}
@@ -70,7 +73,7 @@ function checkBtn() {
         </p>
         <i class="fa fa-check  check"></i>
         <span>
-            sizning ma'lumotlaringiz saqlandi
+            sizning muvaqqiyatli ulandingiz
         </span>
     </div>
 
@@ -78,3 +81,70 @@ function checkBtn() {
     loginCard.innerHTML = check
 
 }
+
+
+
+// INPUT VALUE CHECK
+
+
+// let checkArr = []
+
+function checkValue() {
+
+    let formPhoneNumber = document.querySelector(".form__inputGroup-phone");
+    let formPassword = document.querySelector(".form__inputGroup-password");
+
+    const check = {
+        phone:formPhoneNumber.value,
+        password:formPassword.value,
+
+    }
+
+    // location joyi
+
+    // localStorage.setItem("formPhoneNumber", check.phone);
+    // localStorage.setItem("formPassword", check.password);
+    
+
+    console.log(check.password, check.phone);
+
+    // checkArr.push(check)
+
+
+    if (check.phone.trim() === ""){
+        alert("Telifon raqam kiriting " )
+    } else if(check.password.trim() == "") {
+        alert("**Parolni to'ldiring!")
+        return false;
+     } else if(check.password.trim().length < 8) {
+        alert("**Parol uzunligi kamida 8 ta belgidan iborat bo'lishi kerak")
+        return false;
+     } else if(check.password.trim().length > 15) {
+        alert("**Parol uzunligi 15 belgidan oshmasligi kerak")
+        return false;
+     } else {
+        alert("Muffaqiyatli ulandingiz");
+    }
+    // checkBtn();
+
+
+}
+
+
+// delete function  index.html pages o'tish
+
+
+function deletePage(){
+    window.location.href = "index.html";
+}
+
+
+
+
+
+
+
+
+
+
+

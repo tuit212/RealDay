@@ -198,9 +198,9 @@
     text-align: center;
     top: 40%;
     left: 40%;
-    transform-origin: top left;
+    transform-origin:  bottom top;
     transform: scale(1);
-    transition: .2s;
+    transition: .3s;
 
     .box{
         position: relative;

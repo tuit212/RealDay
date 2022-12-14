@@ -1456,9 +1456,9 @@ template {
   text-align: center;
   top: 40%;
   left: 40%;
-  transform-origin: top left;
+  transform-origin: bottom top;
   transform: scale(1);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .login-card .box {
   position: relative;
