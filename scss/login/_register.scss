@@ -1,0 +1,91 @@
+
+#register{
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+.wrapper__modalForm-userForm-link-kod{
+    font-weight: 500;
+    line-height: 17px;
+    font-size: 14px;
+    text-decoration-line: underline;
+    text-align: center;
+    color: #262626;
+    display: inline-block;
+    padding: 35px 10px 60px 10px;
+}
+
+.submitBtn{
+    width: 100%;
+    border: none;
+    box-shadow: (0px 2px 13px rgba(0, 0, 0, 0.13));
+    border-radius: 12px;
+    background: #FF416C;
+    padding: 11px 0;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.register-card {
+    max-width: 300px;
+    width: 100%;
+    padding: 40px;
+    background-color: #B1AEAE;
+    border-radius: 20px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 40%;
+    transform-origin:  bottom top;
+    transform: scale(1);
+    transition: .3s;
+
+    .box{
+        position: relative;
+    }
+
+    &-phone{
+        color: #FF416C;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    &-password{
+        color: #FF416C;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .check{
+        margin-top: 20px;
+        font-size: 25px;
+        color: #fff;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .delete{
+        position: absolute;
+        right: -25px;
+        top: -30px;
+        padding: 8px 10px;
+        background-color: #4FBA6F;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    & > span {
+        display: inline-block;
+        width: 100%;
+        color: #FFFFFF;
+    }
+}

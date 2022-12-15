@@ -100,30 +100,38 @@
                 <div class="wrapper">
                     <div class="wrapper__modalForm">
                         <div class="wrapper__modalForm-actionBtns">
-                            <button class="actionBtn loginBtn btn">Login</button>
+                            <button class=" registerBtn btn">Registratsiya</button>
                         </div>
-                        <div class="wrapper__modalForm-loginForm">
-                            <form class="form" id="form">
+                        <div class="wrapper__modalForm-registerForm">
+                            <form c id="register">
                                 <div class="form__inputGroup">
-                                    <label for="phone">Telefon</label>
-                                    <input class="form__inputGroup-phone form-input" type="tel" name="phone" id="phone" placeholder="+998 91 298 98 08" required>
+                                    <label for="img-person">Ism</label>
+                                    <input type="text" name="text" id="text" placeholder="Ism" required>
                                 </div>
                                 <div class="form__inputGroup">
-                                    <label for="password">Parol</label>
-                                    <input  class="form__inputGroup-password form-input" type="password" name="password" id="password" placeholder="******" required>
+                                    <label for="img-person">Familiya</label>
+                                    <input type="text" name="familiya" id="familiya" placeholder="familiya" required>
                                 </div>
-                                <button class="submitBtn btnLogin">Login</button>
+                                <div class="form__inputGroup">
+                                    <label for="tel">Telefon</label>
+                                    <input type="tel" name="tel" id="tel" placeholder="+998 91 298 98 08" required>
+                                </div>
+                                <div class="form__inputGroup">
+                                    <label for="img-person">Manzil</label>
+                                    <input type="text" name="manzil" id="manzil" placeholder="manzilingizni kiriting" required>
+                                </div>
+                                <a href="#link" class="wrapper__modalForm-userForm-link-kod">
+                                    Sizning raqamingizga sms kod yuboriladi
+                                </a>
+                                <button class="submitBtn">Registratsiya</button>
                             </form>
-                            <a class="wrapper__modalForm-userForm-link" href="#link">
-                                Parolni unutdingizmi? <br> Yangilash
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- modal uhshab chiqish logindan keyin start -->
-            <div class="login-card" style="transform: scale(0);"></div>
+            <div class="register-card" style="transform: scale(0);"></div>
             <!-- modal uhshab chiqish logindan keyin end -->
         </section>
     </main>
